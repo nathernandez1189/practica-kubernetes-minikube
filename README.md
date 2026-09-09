@@ -37,3 +37,5 @@ cd /home/vagrant/proyectos/practica-kubernetes-minikube
 Al terminar, Minikube queda detenido y conserva su perfil para futuras revisiones.
 
 El informe listo para entregar está disponible en Word y PDF dentro de `docs/`. La guía de sustentación resume los conceptos, el recorrido de la demostración y las evidencias principales.
+
+[Informe para sustentación en vivo en PDF](docs/Informe-Sustentacion-Kubernetes-Minikube.pdf) · [Word](docs/Informe-Sustentacion-Kubernetes-Minikube.docx)
