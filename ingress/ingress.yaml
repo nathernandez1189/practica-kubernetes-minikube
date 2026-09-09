@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: practica-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: practica.local
+      http:
+        paths:
+          - path: /node(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: hello-node
+                port:
+                  number: 8080
+          - path: /echo(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: hello-minikube
+                port:
+                  number: 8080
+
