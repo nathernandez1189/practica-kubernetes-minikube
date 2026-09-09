@@ -1,0 +1,11 @@
+NAME                                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS                  IMAGES                                                                                                                  SELECTOR
+deployment.apps/dashboard-metrics-scraper   1/1     1            1           10m   dashboard-metrics-scraper   docker.io/kubernetesui/metrics-scraper:v1.0.8@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c   k8s-app=dashboard-metrics-scraper
+deployment.apps/kubernetes-dashboard        1/1     1            1           10m   kubernetes-dashboard        docker.io/kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93         k8s-app=kubernetes-dashboard
+
+NAME                                             READY   STATUS    RESTARTS       AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+pod/dashboard-metrics-scraper-69cbd87b98-bbzng   1/1     Running   1 (113s ago)   10m   10.244.0.3   minikube   <none>           <none>
+pod/kubernetes-dashboard-6df74558bd-xgdjg        1/1     Running   2 (79s ago)    10m   10.244.0.4   minikube   <none>           <none>
+
+NAME                                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE   SELECTOR
+service/dashboard-metrics-scraper   ClusterIP   10.106.139.139   <none>        8000/TCP   10m   k8s-app=dashboard-metrics-scraper
+service/kubernetes-dashboard        ClusterIP   10.103.147.168   <none>        80/TCP     10m   k8s-app=kubernetes-dashboard

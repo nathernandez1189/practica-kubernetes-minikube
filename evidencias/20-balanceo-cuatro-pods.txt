@@ -1,0 +1,12 @@
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-p2xvl | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-p2xvl | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-p2xvl | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-p2xvl | v1
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1

@@ -29,10 +29,11 @@ El ZIP de GPU se conserva en `referencias`. Su ejemplo necesita una GPU NVIDIA v
 Dentro de `servidorUbuntu`:
 
 ```bash
-cd /home/vagrant/practica-kubernetes-minikube
+cd /home/vagrant/proyectos/practica-kubernetes-minikube
 ./scripts/instalar-herramientas.sh
 ./scripts/ejecutar-practica.sh
 ```
 
 Al terminar, Minikube queda detenido y conserva su perfil para futuras revisiones.
 
+El informe listo para entregar está disponible en Word y PDF dentro de `docs/`. La guía de sustentación resume los conceptos, el recorrido de la demostración y las evidencias principales.

@@ -1,0 +1,2 @@
+NAME               CLASS   HOSTS            ADDRESS   PORTS   AGE
+practica-ingress   nginx   practica.local             80      2s

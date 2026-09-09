@@ -1,0 +1,19 @@
+Ingress IP=192.168.49.2 Host=practica.local
+--- /node ---
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-4hf82 | v1
+--- /echo ---
+Request served by hello-minikube-54977f4d99-nw98z
+
+HTTP/1.1 GET /
+
+Host: practica.local
+Accept: */*
+User-Agent: curl/7.81.0
+X-Forwarded-For: 192.168.49.1
+X-Forwarded-Host: practica.local
+X-Forwarded-Port: 80
+X-Forwarded-Proto: http
+X-Forwarded-Scheme: http
+X-Real-Ip: 192.168.49.1
+X-Request-Id: d11951085867885c99fc14e695c9d25a
+X-Scheme: http

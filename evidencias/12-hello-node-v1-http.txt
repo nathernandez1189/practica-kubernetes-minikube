@@ -1,0 +1,2 @@
+URL=http://192.168.49.2:30080
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1

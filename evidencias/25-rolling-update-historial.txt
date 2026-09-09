@@ -1,0 +1,5 @@
+deployment.apps/hello-node 
+REVISION  CHANGE-CAUSE
+1         Rolling update hello-node v1 a v2
+2         Rolling update hello-node v1 a v2
+

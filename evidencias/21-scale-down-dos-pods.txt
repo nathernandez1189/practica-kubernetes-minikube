@@ -1,0 +1,5 @@
+NAME                          READY   STATUS        RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+hello-node-7cdb8679b4-4hf82   1/1     Running       0          4s    10.244.0.10   minikube   <none>           <none>
+hello-node-7cdb8679b4-kwh8s   1/1     Running       0          9s    10.244.0.7    minikube   <none>           <none>
+hello-node-7cdb8679b4-n58fz   1/1     Terminating   0          4s    10.244.0.9    minikube   <none>           <none>
+hello-node-7cdb8679b4-p2xvl   1/1     Terminating   0          4s    10.244.0.8    minikube   <none>           <none>

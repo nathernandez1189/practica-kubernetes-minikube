@@ -1,0 +1,15 @@
+NAMESPACE              NAME                                         READY   STATUS      RESTARTS       AGE
+default                hello-minikube-54977f4d99-nw98z              1/1     Running     0              104s
+ingress-nginx          ingress-nginx-admission-create-5dk98         0/1     Completed   0              8m5s
+ingress-nginx          ingress-nginx-admission-patch-7dvr2          0/1     Completed   0              8m5s
+ingress-nginx          ingress-nginx-controller-d7cd8c989-7mnmg     1/1     Running     1 (110s ago)   8m5s
+kube-system            coredns-559f6c778d-svmh7                     1/1     Running     1 (110s ago)   11m
+kube-system            etcd-minikube                                1/1     Running     1 (110s ago)   11m
+kube-system            kindnet-wf7sn                                1/1     Running     1 (110s ago)   11m
+kube-system            kube-apiserver-minikube                      1/1     Running     1 (110s ago)   11m
+kube-system            kube-controller-manager-minikube             1/1     Running     1 (110s ago)   11m
+kube-system            kube-proxy-fc55p                             1/1     Running     1 (110s ago)   11m
+kube-system            kube-scheduler-minikube                      1/1     Running     1 (110s ago)   11m
+kube-system            storage-provisioner                          1/1     Running     2 (76s ago)    11m
+kubernetes-dashboard   dashboard-metrics-scraper-69cbd87b98-bbzng   1/1     Running     1 (110s ago)   10m
+kubernetes-dashboard   kubernetes-dashboard-6df74558bd-xgdjg        1/1     Running     2 (76s ago)    10m

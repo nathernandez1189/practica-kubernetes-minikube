@@ -1,0 +1,54 @@
+Name:             hello-node-7cdb8679b4-kwh8s
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Wed, 09 Sep 2026 08:03:43 +0000
+Labels:           app=hello-node
+                  pod-template-hash=7cdb8679b4
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.7
+IPs:
+  IP:           10.244.0.7
+Controlled By:  ReplicaSet/hello-node-7cdb8679b4
+Containers:
+  hello-node:
+    Container ID:   containerd://38975dc46c28d098da51eaae0fe2febefb28c253538135b91f6bb9c2d965d4ee
+    Image:          hello-node:v1
+    Image ID:       sha256:d8e1d113a344a3310db3d418e75823d25159de1da3cd633f897445ca0f365e67
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 09 Sep 2026 08:03:44 +0000
+    Ready:          True
+    Restart Count:  0
+    Readiness:      http-get http://:8080/ delay=2s timeout=1s period=2s successThreshold=1 failureThreshold=3
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-dfkr4 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-dfkr4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  5s    default-scheduler  Successfully assigned default/hello-node-7cdb8679b4-kwh8s to minikube
+  Normal  Pulled     4s    kubelet            spec.containers{hello-node}: Container image "hello-node:v1" already present on machine and can be accessed by the pod
+  Normal  Created    4s    kubelet            spec.containers{hello-node}: Container created
+  Normal  Started    4s    kubelet            spec.containers{hello-node}: Container started

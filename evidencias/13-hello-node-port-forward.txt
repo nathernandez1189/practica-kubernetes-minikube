@@ -1,0 +1,1 @@
+Hello Kubernetes! | Running on: hello-node-7cdb8679b4-kwh8s | v1

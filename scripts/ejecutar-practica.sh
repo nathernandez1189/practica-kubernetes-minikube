@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_DIR="${1:-/home/vagrant/practica-kubernetes-minikube}"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="${1:-$(cd -- "$SCRIPT_DIR/.." && pwd)}"
 EVIDENCE_DIR="$PROJECT_DIR/evidencias"
 PROXY_PID=""
+PORT_FORWARD_PID=""
 
 mkdir -p "$EVIDENCE_DIR"
 cd "$PROJECT_DIR"
@@ -11,6 +13,9 @@ cd "$PROJECT_DIR"
 cleanup_proxy() {
   if [[ -n "$PROXY_PID" ]]; then
     kill "$PROXY_PID" >/dev/null 2>&1 || true
+  fi
+  if [[ -n "$PORT_FORWARD_PID" ]]; then
+    kill "$PORT_FORWARD_PID" >/dev/null 2>&1 || true
   fi
 }
 trap cleanup_proxy EXIT
@@ -39,16 +44,18 @@ kubectl logs deployment/hello-minikube --tail=30 > "$EVIDENCE_DIR/08-hello-minik
 
 minikube addons enable dashboard
 kubectl -n kubernetes-dashboard rollout status deployment/kubernetes-dashboard --timeout=240s
+kubectl -n kubernetes-dashboard wait --for=condition=Ready pod \
+  -l k8s-app=kubernetes-dashboard --timeout=240s
 kubectl proxy --address=192.168.100.3 --port=8001 --accept-hosts='.*' > /tmp/kubectl-dashboard-proxy.log 2>&1 &
 PROXY_PID="$!"
 DASHBOARD_PATH="/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/"
-curl --retry 30 --retry-delay 1 --retry-connrefused --fail --silent --show-error \
+curl --retry 120 --retry-delay 1 --retry-connrefused --retry-all-errors --fail --silent --show-error \
   --output /dev/null --write-out "Dashboard HTTP=%{http_code}\n" \
   "http://192.168.100.3:8001${DASHBOARD_PATH}" > "$EVIDENCE_DIR/09-dashboard-http.txt"
 kubectl -n kubernetes-dashboard get deployment,pod,service -o wide > "$EVIDENCE_DIR/10-dashboard-recursos.txt"
 
-minikube image build -t hello-node:v1 --build-opt=build-arg=APP_VERSION=v1 hello-node
-minikube image build -t hello-node:v2 --build-opt=build-arg=APP_VERSION=v2 hello-node
+minikube image build -t hello-node:v1 hello-node
+minikube image build -t hello-node:v2 -f Dockerfile.v2 hello-node
 minikube image ls | grep hello-node > "$EVIDENCE_DIR/11-hello-node-imagenes.txt"
 
 kubectl apply -f hello-node/deployment.yaml -f hello-node/service.yaml
@@ -59,6 +66,12 @@ HELLO_NODE_URL="$(minikube service hello-node --url)"
   curl --fail --silent --show-error "$HELLO_NODE_URL"
 } > "$EVIDENCE_DIR/12-hello-node-v1-http.txt"
 kubectl get pods,deployments,services -l app=hello-node -o wide > "$EVIDENCE_DIR/13-hello-node-recursos.txt"
+kubectl port-forward --address=0.0.0.0 service/hello-node 8090:8080 > /tmp/hello-node-port-forward.log 2>&1 &
+PORT_FORWARD_PID="$!"
+curl --retry 20 --retry-delay 1 --retry-connrefused --fail --silent --show-error \
+  http://192.168.100.3:8090 > "$EVIDENCE_DIR/13-hello-node-port-forward.txt"
+kill "$PORT_FORWARD_PID" >/dev/null 2>&1 || true
+PORT_FORWARD_PID=""
 kubectl describe pods -l app=hello-node > "$EVIDENCE_DIR/14-hello-node-describe-pods.txt"
 
 POD_NAME="$(kubectl get pods -l app=hello-node -o jsonpath='{.items[0].metadata.name}')"
@@ -112,6 +125,8 @@ done > "$EVIDENCE_DIR/27-rolling-update-v2-http.txt"
 
 kubectl delete ingress practica-ingress
 kubectl delete service,deployment hello-node hello-minikube
+kubectl wait --for=delete pod -l app=hello-node --timeout=120s || true
+kubectl wait --for=delete pod -l app=hello-minikube --timeout=120s || true
 kubectl get pods,services > "$EVIDENCE_DIR/28-limpieza-kubernetes.txt"
 cleanup_proxy
 PROXY_PID=""
@@ -119,4 +134,3 @@ minikube stop > "$EVIDENCE_DIR/29-minikube-stop.txt"
 minikube status > "$EVIDENCE_DIR/30-minikube-estado-final.txt" 2>&1 || true
 
 echo "Práctica Kubernetes completada y Minikube detenido."
-

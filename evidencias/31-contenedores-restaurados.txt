@@ -1,0 +1,4 @@
+desafio-compose-redis-1|Up 1 second (health: starting)
+desafio-compose-web-1|Up 1 second
+flask-mysql-app-1|Up 1 second
+flask-mysql-db-1|Up 1 second (health: starting)

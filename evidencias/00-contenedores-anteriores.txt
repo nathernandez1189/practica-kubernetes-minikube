@@ -1,0 +1,4 @@
+desafio-compose-redis-1|redis|Up 7 minutes (healthy)
+desafio-compose-web-1|desafio-compose-web|Up 7 minutes
+flask-mysql-app-1|flask-mysql-app|Up 7 minutes
+flask-mysql-db-1|mysql|Up 7 minutes (healthy)

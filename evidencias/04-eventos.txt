@@ -1,0 +1,120 @@
+LAST SEEN   TYPE      REASON                              OBJECT                                 MESSAGE
+11m         Normal    NodeHasNoDiskPressure               node/minikube                          Node minikube status is now: NodeHasNoDiskPressure
+11m         Normal    NodeHasSufficientMemory             node/minikube                          Node minikube status is now: NodeHasSufficientMemory
+11m         Normal    Starting                            node/minikube                          Starting kubelet.
+11m         Warning   PossibleMemoryBackedVolumesOnDisk   node/minikube                          The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+11m         Normal    NodeHasSufficientPID                node/minikube                          Node minikube status is now: NodeHasSufficientPID
+11m         Normal    NodeAllocatableEnforced             node/minikube                          Updated Node Allocatable limit across pods
+11m         Normal    RegisteredNode                      node/minikube                          Node minikube event: Registered Node minikube in Controller
+11m         Normal    SuccessfulCreate                    replicaset/hello-minikube-54977f4d99   Created pod: hello-minikube-54977f4d99-xxplk
+11m         Warning   FailedScheduling                    pod/hello-minikube-54977f4d99-xxplk    0/1 nodes are available: 1 node(s) had untolerated taint(s). preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+11m         Normal    ScalingReplicaSet                   deployment/hello-minikube              Scaled up replica set hello-minikube-54977f4d99 from 0 to 1
+11m         Normal    Starting                            node/minikube                          
+10m         Normal    Pulling                             pod/hello-minikube-54977f4d99-xxplk    Pulling image "kicbase/echo-server:1.0"
+10m         Normal    Scheduled                           pod/hello-minikube-54977f4d99-xxplk    Successfully assigned default/hello-minikube-54977f4d99-xxplk to minikube
+10m         Normal    NodeReady                           node/minikube                          Node minikube status is now: NodeReady
+10m         Normal    Pulled                              pod/hello-minikube-54977f4d99-xxplk    Successfully pulled image "kicbase/echo-server:1.0" in 3.134s (3.134s including waiting). Image size: 1977221 bytes.
+10m         Normal    Started                             pod/hello-minikube-54977f4d99-xxplk    Container started
+10m         Normal    Created                             pod/hello-minikube-54977f4d99-xxplk    Container created
+8m14s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled up replica set hello-node-7cdb8679b4 from 0 to 1
+8m14s       Normal    Scheduled                           pod/hello-node-7cdb8679b4-tkxc2        Successfully assigned default/hello-node-7cdb8679b4-tkxc2 to minikube
+8m14s       Normal    SuccessfulCreate                    replicaset/hello-node-7cdb8679b4       Created pod: hello-node-7cdb8679b4-tkxc2
+8m13s       Normal    Created                             pod/hello-node-7cdb8679b4-tkxc2        Container created
+8m13s       Normal    Pulled                              pod/hello-node-7cdb8679b4-tkxc2        Container image "hello-node:v1" already present on machine and can be accessed by the pod
+8m13s       Normal    Started                             pod/hello-node-7cdb8679b4-tkxc2        Container started
+8m10s       Normal    Scheduled                           pod/hello-node-7cdb8679b4-z8th5        Successfully assigned default/hello-node-7cdb8679b4-z8th5 to minikube
+8m10s       Normal    Started                             pod/hello-node-7cdb8679b4-z8th5        Container started
+8m10s       Normal    SuccessfulCreate                    replicaset/hello-node-7cdb8679b4       Created pod: hello-node-7cdb8679b4-bvklt
+8m10s       Normal    Started                             pod/hello-node-7cdb8679b4-bvklt        Container started
+8m10s       Normal    SuccessfulCreate                    replicaset/hello-node-7cdb8679b4       Created pod: hello-node-7cdb8679b4-vk6q9
+8m10s       Normal    Created                             pod/hello-node-7cdb8679b4-bvklt        Container created
+8m10s       Normal    SuccessfulCreate                    replicaset/hello-node-7cdb8679b4       Created pod: hello-node-7cdb8679b4-z8th5
+8m10s       Normal    Pulled                              pod/hello-node-7cdb8679b4-bvklt        Container image "hello-node:v1" already present on machine and can be accessed by the pod
+8m10s       Normal    Scheduled                           pod/hello-node-7cdb8679b4-bvklt        Successfully assigned default/hello-node-7cdb8679b4-bvklt to minikube
+8m10s       Normal    Scheduled                           pod/hello-node-7cdb8679b4-vk6q9        Successfully assigned default/hello-node-7cdb8679b4-vk6q9 to minikube
+8m10s       Normal    Pulled                              pod/hello-node-7cdb8679b4-vk6q9        Container image "hello-node:v1" already present on machine and can be accessed by the pod
+8m10s       Normal    Created                             pod/hello-node-7cdb8679b4-vk6q9        Container created
+8m10s       Normal    Started                             pod/hello-node-7cdb8679b4-vk6q9        Container started
+8m10s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled up replica set hello-node-7cdb8679b4 from 1 to 4
+8m10s       Normal    Created                             pod/hello-node-7cdb8679b4-z8th5        Container created
+8m10s       Normal    Pulled                              pod/hello-node-7cdb8679b4-z8th5        Container image "hello-node:v1" already present on machine and can be accessed by the pod
+8m6s        Normal    Killing                             pod/hello-node-7cdb8679b4-vk6q9        Stopping container hello-node
+8m6s        Normal    SuccessfulDelete                    replicaset/hello-node-7cdb8679b4       Deleted pod: hello-node-7cdb8679b4-vk6q9
+8m6s        Normal    SuccessfulDelete                    replicaset/hello-node-7cdb8679b4       Deleted pod: hello-node-7cdb8679b4-bvklt
+8m6s        Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled down replica set hello-node-7cdb8679b4 from 4 to 2
+8m6s        Normal    Killing                             pod/hello-node-7cdb8679b4-bvklt        Stopping container hello-node
+6m53s       Normal    Sync                                ingress/practica-ingress               Scheduled for sync
+7m41s       Normal    Created                             pod/hello-node-7cdb8679b4-ztfv8        Container created
+7m41s       Normal    Scheduled                           pod/hello-node-7cdb8679b4-mclzd        Successfully assigned default/hello-node-7cdb8679b4-mclzd to minikube
+7m41s       Normal    Started                             pod/hello-node-7cdb8679b4-ztfv8        Container started
+7m41s       Normal    Pulled                              pod/hello-node-7cdb8679b4-ztfv8        Container image "hello-node:v1" already present on machine and can be accessed by the pod
+7m41s       Normal    Created                             pod/hello-node-7cdb8679b4-mclzd        Container created
+7m41s       Normal    Started                             pod/hello-node-7cdb8679b4-mclzd        Container started
+7m41s       Normal    Scheduled                           pod/hello-node-7cdb8679b4-ztfv8        Successfully assigned default/hello-node-7cdb8679b4-ztfv8 to minikube
+7m41s       Normal    Pulled                              pod/hello-node-7cdb8679b4-mclzd        Container image "hello-node:v1" already present on machine and can be accessed by the pod
+7m41s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled up replica set hello-node-7cdb8679b4 from 2 to 4
+7m41s       Normal    SuccessfulCreate                    replicaset/hello-node-7cdb8679b4       Created pod: hello-node-7cdb8679b4-ztfv8
+7m41s       Normal    SuccessfulCreate                    replicaset/hello-node-7cdb8679b4       Created pod: hello-node-7cdb8679b4-mclzd
+7m39s       Normal    SuccessfulCreate                    replicaset/hello-node-945b5fb85        Created pod: hello-node-945b5fb85-5dn59
+7m39s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled up replica set hello-node-945b5fb85 from 0 to 1
+7m39s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled up replica set hello-node-945b5fb85 from 1 to 2
+7m39s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled down replica set hello-node-7cdb8679b4 from 4 to 3
+7m39s       Normal    Scheduled                           pod/hello-node-945b5fb85-5dn59         Successfully assigned default/hello-node-945b5fb85-5dn59 to minikube
+7m39s       Normal    SuccessfulCreate                    replicaset/hello-node-945b5fb85        Created pod: hello-node-945b5fb85-vbrv7
+7m39s       Normal    SuccessfulDelete                    replicaset/hello-node-7cdb8679b4       Deleted pod: hello-node-7cdb8679b4-ztfv8
+7m39s       Normal    Scheduled                           pod/hello-node-945b5fb85-vbrv7         Successfully assigned default/hello-node-945b5fb85-vbrv7 to minikube
+7m38s       Normal    Killing                             pod/hello-node-7cdb8679b4-ztfv8        Stopping container hello-node
+6m10s       Warning   Failed                              pod/hello-node-945b5fb85-5dn59         Error: ErrImageNeverPull
+6m10s       Warning   ErrImageNeverPull                   pod/hello-node-945b5fb85-5dn59         Container image "hello-node:v2" is not present with pull policy of Never
+6m5s        Warning   Failed                              pod/hello-node-945b5fb85-vbrv7         Error: ErrImageNeverPull
+6m5s        Warning   ErrImageNeverPull                   pod/hello-node-945b5fb85-vbrv7         Container image "hello-node:v2" is not present with pull policy of Never
+5m55s       Normal    Created                             pod/hello-node-945b5fb85-5dn59         Container created
+5m55s       Normal    Started                             pod/hello-node-945b5fb85-5dn59         Container started
+5m55s       Normal    Pulled                              pod/hello-node-945b5fb85-5dn59         Container image "hello-node:v2" already present on machine and can be accessed by the pod
+5m54s       Normal    Created                             pod/hello-node-945b5fb85-vbrv7         Container created
+5m54s       Normal    Pulled                              pod/hello-node-945b5fb85-vbrv7         Container image "hello-node:v2" already present on machine and can be accessed by the pod
+5m54s       Normal    Started                             pod/hello-node-945b5fb85-vbrv7         Container started
+5m52s       Normal    Created                             pod/hello-node-945b5fb85-wpgzv         Container created
+5m52s       Normal    Started                             pod/hello-node-945b5fb85-wpgzv         Container started
+5m52s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled down replica set hello-node-7cdb8679b4 from 3 to 2
+5m52s       Normal    ScalingReplicaSet                   deployment/hello-node                  Scaled up replica set hello-node-945b5fb85 from 2 to 3
+5m52s       Normal    SuccessfulCreate                    replicaset/hello-node-945b5fb85        Created pod: hello-node-945b5fb85-wpgzv
+5m52s       Normal    SuccessfulDelete                    replicaset/hello-node-7cdb8679b4       Deleted pod: hello-node-7cdb8679b4-z8th5
+5m52s       Normal    Scheduled                           pod/hello-node-945b5fb85-wpgzv         Successfully assigned default/hello-node-945b5fb85-wpgzv to minikube
+5m52s       Normal    Pulled                              pod/hello-node-945b5fb85-wpgzv         Container image "hello-node:v2" already present on machine and can be accessed by the pod
+5m52s       Normal    Killing                             pod/hello-node-7cdb8679b4-z8th5        Stopping container hello-node
+5m49s       Normal    ScalingReplicaSet                   deployment/hello-node                  (combined from similar events): Scaled down replica set hello-node-7cdb8679b4 from 1 to 0
+5m51s       Normal    SuccessfulDelete                    replicaset/hello-node-7cdb8679b4       Deleted pod: hello-node-7cdb8679b4-mclzd
+5m51s       Normal    Pulled                              pod/hello-node-945b5fb85-rw4rg         Container image "hello-node:v2" already present on machine and can be accessed by the pod
+5m51s       Normal    Created                             pod/hello-node-945b5fb85-rw4rg         Container created
+5m51s       Normal    Killing                             pod/hello-node-7cdb8679b4-mclzd        Stopping container hello-node
+5m51s       Normal    SuccessfulCreate                    replicaset/hello-node-945b5fb85        Created pod: hello-node-945b5fb85-rw4rg
+5m51s       Normal    Scheduled                           pod/hello-node-945b5fb85-rw4rg         Successfully assigned default/hello-node-945b5fb85-rw4rg to minikube
+5m51s       Normal    Started                             pod/hello-node-945b5fb85-rw4rg         Container started
+5m49s       Normal    Killing                             pod/hello-node-7cdb8679b4-tkxc2        Stopping container hello-node
+5m49s       Normal    SuccessfulDelete                    replicaset/hello-node-7cdb8679b4       Deleted pod: hello-node-7cdb8679b4-tkxc2
+5m48s       Normal    Killing                             pod/hello-node-945b5fb85-vbrv7         Stopping container hello-node
+5m48s       Normal    Killing                             pod/hello-node-945b5fb85-5dn59         Stopping container hello-node
+5m48s       Normal    Killing                             pod/hello-minikube-54977f4d99-xxplk    Stopping container echo-server
+5m48s       Normal    Killing                             pod/hello-node-945b5fb85-wpgzv         Stopping container hello-node
+108s        Warning   FailedMount                         pod/hello-node-945b5fb85-wpgzv         MountVolume.SetUp failed for volume "kube-api-access-bb866" : object "default"/"kube-root-ca.crt" not registered
+111s        Normal    NodeHasSufficientPID                node/minikube                          Node minikube status is now: NodeHasSufficientPID
+106s        Normal    Starting                            node/minikube                          
+108s        Warning   FailedMount                         pod/hello-node-7cdb8679b4-tkxc2        MountVolume.SetUp failed for volume "kube-api-access-5px2x" : object "default"/"kube-root-ca.crt" not registered
+108s        Warning   FailedMount                         pod/hello-node-945b5fb85-vbrv7         MountVolume.SetUp failed for volume "kube-api-access-xg9rs" : object "default"/"kube-root-ca.crt" not registered
+108s        Warning   FailedMount                         pod/hello-node-7cdb8679b4-mclzd        MountVolume.SetUp failed for volume "kube-api-access-pmphv" : object "default"/"kube-root-ca.crt" not registered
+108s        Warning   FailedMount                         pod/hello-node-945b5fb85-rw4rg         MountVolume.SetUp failed for volume "kube-api-access-69zb5" : object "default"/"kube-root-ca.crt" not registered
+111s        Normal    NodeAllocatableEnforced             node/minikube                          Updated Node Allocatable limit across pods
+108s        Warning   FailedMount                         pod/hello-node-7cdb8679b4-z8th5        MountVolume.SetUp failed for volume "kube-api-access-2wdnv" : object "default"/"kube-root-ca.crt" not registered
+108s        Warning   FailedMount                         pod/hello-node-945b5fb85-5dn59         MountVolume.SetUp failed for volume "kube-api-access-4n259" : object "default"/"kube-root-ca.crt" not registered
+111s        Normal    NodeHasNoDiskPressure               node/minikube                          Node minikube status is now: NodeHasNoDiskPressure
+111s        Normal    NodeHasSufficientMemory             node/minikube                          Node minikube status is now: NodeHasSufficientMemory
+111s        Warning   PossibleMemoryBackedVolumesOnDisk   node/minikube                          The tmpfs noswap option is not supported. Memory-backed volumes (e.g. secrets, emptyDirs, etc.) might be swapped to disk and should no longer be considered secure.
+111s        Normal    Starting                            node/minikube                          Starting kubelet.
+105s        Normal    Created                             pod/hello-minikube-54977f4d99-nw98z    Container created
+105s        Normal    Started                             pod/hello-minikube-54977f4d99-nw98z    Container started
+105s        Normal    SuccessfulCreate                    replicaset/hello-minikube-54977f4d99   Created pod: hello-minikube-54977f4d99-nw98z
+105s        Normal    ScalingReplicaSet                   deployment/hello-minikube              Scaled up replica set hello-minikube-54977f4d99 from 0 to 1
+105s        Normal    Scheduled                           pod/hello-minikube-54977f4d99-nw98z    Successfully assigned default/hello-minikube-54977f4d99-nw98z to minikube
+105s        Normal    RegisteredNode                      node/minikube                          Node minikube event: Registered Node minikube in Controller
+105s        Normal    Pulled                              pod/hello-minikube-54977f4d99-nw98z    Container image "kicbase/echo-server:1.0" already present on machine and can be accessed by the pod

@@ -1,0 +1,5 @@
+NAME                                  READY   STATUS    RESTARTS   AGE    IP           NODE       NOMINATED NODE   READINESS GATES
+pod/hello-minikube-54977f4d99-nw98z   1/1     Running   0          105s   10.244.0.6   minikube   <none>           <none>
+
+NAME                     TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE    SELECTOR
+service/hello-minikube   NodePort   10.100.199.66   <none>        8080:30081/TCP   107s   app=hello-minikube

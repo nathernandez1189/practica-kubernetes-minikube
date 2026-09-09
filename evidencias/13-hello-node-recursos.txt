@@ -1,0 +1,5 @@
+NAME                              READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+pod/hello-node-7cdb8679b4-kwh8s   1/1     Running   0          4s    10.244.0.7   minikube   <none>           <none>
+
+NAME                 TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE   SELECTOR
+service/hello-node   NodePort   10.105.180.217   <none>        8080:30080/TCP   4s    app=hello-node

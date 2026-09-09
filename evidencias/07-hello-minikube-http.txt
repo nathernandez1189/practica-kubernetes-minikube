@@ -1,0 +1,8 @@
+URL=http://192.168.49.2:30081
+Request served by hello-minikube-54977f4d99-nw98z
+
+HTTP/1.1 GET /
+
+Host: 192.168.49.2:30081
+Accept: */*
+User-Agent: curl/7.81.0

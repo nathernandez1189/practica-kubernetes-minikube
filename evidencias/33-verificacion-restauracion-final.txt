@@ -1,0 +1,20 @@
+Verificación final: 9 de septiembre de 2026
+
+Minikube:
+- host: Stopped
+- kubelet: Stopped
+- apiserver: Stopped
+- kubeconfig: Stopped
+
+Contenedores restaurados:
+- flask-mysql-app-1: running
+- flask-mysql-db-1: running, healthy
+- desafio-compose-web-1: running
+- desafio-compose-redis-1: running, healthy
+
+Pruebas HTTP:
+- Flask + MySQL: respuesta correcta en http://192.168.100.3:5000/
+- Flask + Redis: respuesta correcta en http://192.168.100.3:5100/
+
+Se creó y verificó un respaldo completo en:
+/home/vagrant/proyectos/practica-kubernetes-minikube
